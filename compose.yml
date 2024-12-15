@@ -1,0 +1,23 @@
+services:
+  app:
+    build:
+      context: .
+    container_name: test_project
+    depends_on:
+      - mongo
+    volumes:
+      - ./app:/app
+    ports:
+      - "8501:8501"  # Порт для Streamlit
+    command: streamlit run /app/main.py --server.port=8501 --server.address=0.0.0.0
+
+  mongo:
+    image: mongo:6.0
+    container_name: mongo
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo-data:/data/db
+
+volumes:
+  mongo-data:
