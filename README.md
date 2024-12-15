@@ -1,2 +1,2 @@
-# world_bank_data_visualization
+# World Bank Data Visualization
 Проектная работа по дисциплине ТОБД в 5 семестре направления ПМИ в Финансовом Университете.
