@@ -50,6 +50,9 @@ def visualizer():
             index=None
     )
 
+    if 0 == len(selected_countries):
+        selected_countries = countries
+        
     query_filter = {
                      "indicator_name" : selected_name, 
                      "Year" : {"$gte": start_date, "$lte": end_date},
